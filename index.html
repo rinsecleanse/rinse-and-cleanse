@@ -3,33 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rinse & Cleanse | Cleaning & Lighting Services in British Columbia</title>
+<title>Rinse & Cleanse | Gutter, Roof & Window Cleaning in British Columbia</title>
+
+<meta name="description" content="Rinse & Cleanse provides professional gutter cleaning, roof cleaning, window cleaning, pressure washing and lighting installation services in British Columbia, Canada.">
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f8fb;
+    line-height: 1.6;
 }
 
 header {
     background: #0a3d62;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
 nav {
     background: #074173;
-    text-align: center;
     padding: 10px;
+    text-align: center;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
     margin: 0 15px;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -38,31 +40,30 @@ nav a:hover {
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
     padding: 100px 20px;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 38px;
 }
 
-.hero button {
+button {
     padding: 12px 25px;
-    margin: 10px;
     border: none;
+    margin: 10px;
+    border-radius: 5px;
     background: #00a8ff;
     color: white;
-    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.hero button:hover {
+button:hover {
     background: #0097e6;
 }
 
@@ -78,7 +79,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-.services {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -95,7 +96,7 @@ nav a:hover {
     color: #074173;
 }
 
-.contact {
+.cta {
     background: #0a3d62;
     color: white;
     text-align: center;
@@ -114,74 +115,89 @@ footer {
 <body>
 
 <header>
-    <h1>Rinse & Cleanse</h1>
-    <p>Professional Cleaning & Lighting Services in British Columbia</p>
+<h1>Rinse & Cleanse</h1>
+<p>Professional Cleaning & Lighting Services in British Columbia</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#areas">Service Areas</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
-    <h1>Exterior Cleaning & Lighting Experts</h1>
-    <p>Reliable. Affordable. Spotless Results.</p>
-    <button onclick="location.href='#contact'">Get Free Quote</button>
-    <button onclick="location.href='tel:+10000000000'">Call Now</button>
-</section>
-
-<section id="about" class="section">
-    <h2>About Us</h2>
-    <p>
-        At Rinse & Cleanse, we provide professional exterior cleaning and lighting 
-        services across British Columbia. Our trained team uses modern equipment 
-        and safe cleaning methods to ensure your property looks its best all year round.
-    </p>
+<h1>Exterior Cleaning Experts in British Columbia</h1>
+<p>Reliable • Affordable • Professional Results</p>
+<button onclick="location.href='#contact'">Get Free Quote</button>
+<button onclick="location.href='tel:+16041234567'">Call Now</button>
 </section>
 
 <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-        
-        <div class="card">
-            <h3>Gutter Cleaning</h3>
-            <p>We remove debris and blockages to protect your home from water damage.</p>
-        </div>
-
-        <div class="card">
-            <h3>Roof Cleaning</h3>
-            <p>Safe moss and algae removal to extend the life of your roof.</p>
-        </div>
-
-        <div class="card">
-            <h3>Window Cleaning</h3>
-            <p>Interior and exterior streak-free window cleaning services.</p>
-        </div>
-
-        <div class="card">
-            <h3>Pressure Washing</h3>
-            <p>Driveways, patios, siding, decks – we remove tough dirt and stains.</p>
-        </div>
-
-        <div class="card">
-            <h3>Lighting Installation</h3>
-            <p>Outdoor security lighting, landscape lighting, and holiday installations.</p>
-        </div>
-
-    </div>
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card"><h3>Gutter Cleaning</h3><p>Prevent water damage and foundation issues with professional debris removal.</p></div>
+<div class="card"><h3>Roof Cleaning</h3><p>Safe moss and algae removal using soft wash techniques.</p></div>
+<div class="card"><h3>Window Cleaning</h3><p>Interior & exterior streak-free shine.</p></div>
+<div class="card"><h3>Pressure Washing</h3><p>Driveways, patios, decks, and siding deep cleaning.</p></div>
+<div class="card"><h3>Lighting Installation</h3><p>Security lighting, landscape lighting & holiday lights.</p></div>
+</div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Serving British Columbia, Canada</p>
-    <p>📞 Phone: +1 604 781 5289</p>
-    <p>📧 Email: info@rinseandcleanse.ca</p>
-    <p>Get your free estimate today!</p>
+<section class="section">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card"><h3>Fully Insured</h3><p>Your property is safe with us.</p></div>
+<div class="card"><h3>Affordable Pricing</h3><p>No hidden costs. Transparent quotes.</p></div>
+<div class="card"><h3>Experienced Team</h3><p>Professional tools & trained staff.</p></div>
+<div class="card"><h3>100% Satisfaction</h3><p>We guarantee quality results.</p></div>
+</div>
+</section>
+
+<section id="pricing" class="section">
+<h2>Pricing</h2>
+<div class="grid">
+<div class="card"><h3>Gutter Cleaning</h3><p>Starting from $120</p></div>
+<div class="card"><h3>Roof Cleaning</h3><p>Starting from $250</p></div>
+<div class="card"><h3>Window Cleaning</h3><p>Starting from $99</p></div>
+<div class="card"><h3>Pressure Washing</h3><p>Starting from $150</p></div>
+<div class="card"><h3>Lighting Installation</h3><p>Custom Quote</p></div>
+</div>
+</section>
+
+<section id="areas" class="section">
+<h2>Service Areas</h2>
+<p style="text-align:center;">
+Serving Vancouver, Surrey, Burnaby, Richmond, Langley and surrounding areas in British Columbia, Canada.
+</p>
+</section>
+
+<section class="section">
+<h2>Customer Testimonials</h2>
+<div class="grid">
+<div class="card"><p>⭐⭐⭐⭐⭐<br>"Amazing roof cleaning service. Highly recommend!" – James M.</p></div>
+<div class="card"><p>⭐⭐⭐⭐⭐<br>"Very professional gutter cleaning team." – Sarah L.</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<p><strong>How often should gutters be cleaned?</strong><br>At least twice a year in British Columbia due to heavy rain and falling leaves.</p>
+<p><strong>Do you use safe roof cleaning methods?</strong><br>Yes, we use soft washing to prevent roof damage.</p>
+</div>
+</section>
+
+<section id="contact" class="cta">
+<h2>Ready to Make Your Property Shine?</h2>
+<p>📍 British Columbia, Canada</p>
+<p>📞 +1 604 123 4567</p>
+<p>📧 info@rinseandcleanse.ca</p>
+<button onclick="location.href='tel:+16041234567'">Call Now</button>
 </section>
 
 <footer>
-    <p>© 2026 Rinse & Cleanse | All Rights Reserved</p>
+<p>© 2026 Rinse & Cleanse | All Rights Reserved</p>
 </footer>
 
 </body>

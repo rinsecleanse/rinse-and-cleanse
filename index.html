@@ -3,202 +3,339 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rinse & Cleanse | Gutter, Roof & Window Cleaning in British Columbia</title>
+<title>Rinse & Cleanse | Luxury Exterior Services</title>
 
-<meta name="description" content="Rinse & Cleanse provides professional gutter cleaning, roof cleaning, window cleaning, pressure washing and lighting installation services in British Columbia, Canada.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f8fb;
-    line-height: 1.6;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-header {
-    background: #0a3d62;
-    color: white;
-    padding: 20px;
-    text-align: center;
+body{
+background:#0f172a;
+color:#ffffff;
+overflow-x:hidden;
 }
 
-nav {
-    background: #074173;
-    padding: 10px;
-    text-align: center;
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+background:transparent;
+transition:all 0.4s ease;
+z-index:1000;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+nav.scrolled{
+background:rgba(15,23,42,0.95);
+padding:15px 8%;
+backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
-nav a:hover {
-    color: #00d2ff;
+nav h2{
+font-weight:700;
+letter-spacing:1px;
 }
 
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+position:relative;
 }
 
-.hero h1 {
-    font-size: 38px;
+nav a::after{
+content:'';
+position:absolute;
+width:0;
+height:2px;
+background:#38bdf8;
+left:0;
+bottom:-6px;
+transition:0.3s;
 }
 
-button {
-    padding: 12px 25px;
-    border: none;
-    margin: 10px;
-    border-radius: 5px;
-    background: #00a8ff;
-    color: white;
-    cursor: pointer;
+nav a:hover::after{
+width:100%;
 }
 
-button:hover {
-    background: #0097e6;
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+padding:20px;
 }
 
-.section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+.hero h1{
+font-size:56px;
+background:linear-gradient(to right,#38bdf8,#22d3ee);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+animation:fadeDown 1.2s ease forwards;
 }
 
-.section h2 {
-    text-align: center;
-    color: #0a3d62;
-    margin-bottom: 30px;
+.hero p{
+font-size:20px;
+opacity:0;
+animation:fadeUp 1.2s ease forwards 0.6s;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:16px 40px;
+border-radius:40px;
+background:linear-gradient(45deg,#38bdf8,#22d3ee);
+color:#0f172a;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 15px 35px rgba(34,211,238,0.3);
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 50px rgba(34,211,238,0.5);
 }
 
-.card h3 {
-    color: #074173;
+.section{
+padding:120px 8%;
+text-align:center;
+opacity:0;
+transform:translateY(50px);
+transition:all 0.8s ease;
 }
 
-.cta {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+.section.show{
+opacity:1;
+transform:translateY(0);
 }
 
-footer {
-    background: #021c35;
-    color: white;
-    text-align: center;
-    padding: 15px;
+.section h2{
+font-size:36px;
+margin-bottom:60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,0.5);
+}
+
+.counter{
+font-size:48px;
+font-weight:700;
+color:#38bdf8;
+}
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+form input,form select,form textarea{
+padding:15px;
+border-radius:12px;
+border:none;
+background:rgba(255,255,255,0.08);
+color:white;
+}
+
+form input:focus,form select:focus,form textarea:focus{
+outline:none;
+box-shadow:0 0 0 3px rgba(56,189,248,0.4);
+}
+
+form button{
+padding:16px;
+border:none;
+border-radius:12px;
+background:linear-gradient(45deg,#38bdf8,#22d3ee);
+color:#0f172a;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+form button:hover{
+transform:translateY(-3px);
+}
+
+.call-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:linear-gradient(45deg,#38bdf8,#22d3ee);
+color:#0f172a;
+padding:18px 20px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 15px 40px rgba(34,211,238,0.4);
+transition:0.3s;
+z-index:999;
+}
+
+.call-btn:hover{
+transform:scale(1.1);
+}
+
+footer{
+background:#0f172a;
+padding:40px;
+text-align:center;
+margin-top:60px;
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:768px){
+.hero h1{font-size:34px;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Rinse & Cleanse</h1>
-<p>Professional Cleaning & Lighting Services in British Columbia</p>
-</header>
-
-<nav>
+<nav id="navbar">
+<h2>Rinse & Cleanse</h2>
+<div>
 <a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#areas">Service Areas</a>
-<a href="#contact">Contact</a>
+<a href="#stats">Stats</a>
+<a href="#booking">Book</a>
+</div>
 </nav>
 
 <section class="hero">
-<h1>Exterior Cleaning Experts in British Columbia</h1>
-<p>Reliable • Affordable • Professional Results</p>
-<button onclick="location.href='#contact'">Get Free Quote</button>
-<button onclick="location.href='tel:+16041234567'">Call Now</button>
+<div>
+<h1>Luxury Exterior Cleaning & Lighting</h1>
+<p>Premium Property Care Across British Columbia</p>
+<a href="#booking" class="btn">Get Free Quote</a>
+</div>
 </section>
 
 <section id="services" class="section">
 <h2>Our Services</h2>
 <div class="grid">
-<div class="card"><h3>Gutter Cleaning</h3><p>Prevent water damage and foundation issues with professional debris removal.</p></div>
-<div class="card"><h3>Roof Cleaning</h3><p>Safe moss and algae removal using soft wash techniques.</p></div>
-<div class="card"><h3>Window Cleaning</h3><p>Interior & exterior streak-free shine.</p></div>
-<div class="card"><h3>Pressure Washing</h3><p>Driveways, patios, decks, and siding deep cleaning.</p></div>
-<div class="card"><h3>Lighting Installation</h3><p>Security lighting, landscape lighting & holiday lights.</p></div>
+<div class="card"><h3>Roof Cleaning</h3><p>Safe moss removal & soft washing.</p></div>
+<div class="card"><h3>Gutter Cleaning</h3><p>Clog-free protection from water damage.</p></div>
+<div class="card"><h3>Window Cleaning</h3><p>Crystal clear interior & exterior glass.</p></div>
+<div class="card"><h3>Lighting Installation</h3><p>Roofline & seasonal lighting solutions.</p></div>
 </div>
 </section>
 
-<section class="section">
-<h2>Why Choose Us</h2>
+<section id="stats" class="section">
+<h2>Our Impact</h2>
 <div class="grid">
-<div class="card"><h3>Fully Insured</h3><p>Your property is safe with us.</p></div>
-<div class="card"><h3>Affordable Pricing</h3><p>No hidden costs. Transparent quotes.</p></div>
-<div class="card"><h3>Experienced Team</h3><p>Professional tools & trained staff.</p></div>
-<div class="card"><h3>100% Satisfaction</h3><p>We guarantee quality results.</p></div>
-</div>
-</section>
-
-<section id="pricing" class="section">
-<h2>Pricing</h2>
-<div class="grid">
-<div class="card"><h3>Gutter Cleaning</h3><p>Starting from $120</p></div>
-<div class="card"><h3>Roof Cleaning</h3><p>Starting from $250</p></div>
-<div class="card"><h3>Window Cleaning</h3><p>Starting from $99</p></div>
-<div class="card"><h3>Pressure Washing</h3><p>Starting from $150</p></div>
-<div class="card"><h3>Lighting Installation</h3><p>Custom Quote</p></div>
-</div>
-</section>
-
-<section id="areas" class="section">
-<h2>Service Areas</h2>
-<p style="text-align:center;">
-Serving Vancouver, Surrey, Burnaby, Richmond, Langley and surrounding areas in British Columbia, Canada.
-</p>
-</section>
-
-<section class="section">
-<h2>Customer Testimonials</h2>
-<div class="grid">
-<div class="card"><p>⭐⭐⭐⭐⭐<br>"Amazing roof cleaning service. Highly recommend!" – James M.</p></div>
-<div class="card"><p>⭐⭐⭐⭐⭐<br>"Very professional gutter cleaning team." – Sarah L.</p></div>
-</div>
-</section>
-
-<section class="section">
-<h2>Frequently Asked Questions</h2>
 <div class="card">
-<p><strong>How often should gutters be cleaned?</strong><br>At least twice a year in British Columbia due to heavy rain and falling leaves.</p>
-<p><strong>Do you use safe roof cleaning methods?</strong><br>Yes, we use soft washing to prevent roof damage.</p>
+<div class="counter" data-target="500">0</div>
+<p>Homes Cleaned</p>
+</div>
+<div class="card">
+<div class="counter" data-target="120">0</div>
+<p>Lighting Projects</p>
+</div>
+<div class="card">
+<div class="counter" data-target="100">0</div>
+<p>% Satisfaction</p>
+</div>
 </div>
 </section>
 
-<section id="contact" class="cta">
-<h2>Ready to Make Your Property Shine?</h2>
-<p>📍 British Columbia, Canada</p>
-<p>📞 +1 604 781 5289</p>
-<p>📧 info@rinseandcleanse.ca</p>
-<button onclick="location.href='tel:+16041234567'">Call Now</button>
+<section id="booking" class="section">
+<h2>Book Premium Service</h2>
+<form action="https://formsubmit.co/YOUREMAIL@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<select name="service" required>
+<option value="">Select Service</option>
+<option>Roof Cleaning</option>
+<option>Gutter Cleaning</option>
+<option>Window Cleaning</option>
+<option>Lighting Installation</option>
+</select>
+<textarea name="message" rows="4" placeholder="Property details"></textarea>
+<button type="submit">Submit Request</button>
+</form>
 </section>
 
 <footer>
-<p>© 2026 Rinse & Cleanse | All Rights Reserved</p>
+© 2026 Rinse & Cleanse | British Columbia
 </footer>
+
+<a href="tel:604XXXXXXX" class="call-btn">📞</a>
+
+<script>
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+sections.forEach(section=>{
+if(section.getBoundingClientRect().top<window.innerHeight-100){
+section.classList.add('show');
+}
+});
+});
+
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+counter.innerText='0';
+const updateCounter=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const increment=target/100;
+if(c<target){
+counter.innerText=Math.ceil(c+increment);
+setTimeout(updateCounter,20);
+}else{
+counter.innerText=target+'+';
+}
+};
+updateCounter();
+});
+</script>
 
 </body>
 </html>
